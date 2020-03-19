@@ -1,0 +1,234 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+/* 기본 박스 사이징 */
+
+
+
+body *,
+body *::before,
+body *::after {
+    box-sizing: border-box;
+}
+
+/* 레이아웃 */
+
+/* 하이퍼 링크 스타일 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 유틸리티 */
+.a11y-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 본문 기본설정 */
+html {
+    font-size: 10px;
+}
+
+/* 메인 메뉴 */
+.navigation {
+    padding-bottom: 12px;
+}
+
+.menu {
+    background-image: linear-gradient(to bottom, #ff6868 2%, #ff6868 2%, #ff6868 3%, #ff6868 3%, #ff3a3a 33%, #ff3a3a 67%, #ff6868 94%);
+    background: #ff6868;
+    list-style-type: none;
+    border-top: 2px solid #181818;
+    border-radius: 0 0 5px 5px;
+    height: 47px;
+    /* box-shadow: 0 -2px 0 0 #181818; */
+    margin: 5px 0 0;
+    padding-left: 0;
+    text-align: right;
+}
+
+.menu-item {
+    float: left;
+    margin-right: -4px;
+    border-left: 2px solid rgba(255, 255, 255, .5);
+    position: relative;
+    left: 275px;
+}
+
+.menu-link {
+    display: block;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 1.4rem 0;
+    margin: 0 2rem;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.menu-link:focus{
+    color: yellow;
+    border-bottom: 2px solid black;
+}
+
+.menu-link:focus + .submenu{
+    width: auto;
+    height: auto;
+    position: absolute;
+    clip: auto;
+}
+.submenu {
+    white-space: nowrap;
+    padding-left: 0;
+    list-style-type: none;
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0,0,0,0);
+}   
+.submenu li {
+    display: inline-block;
+    margin: 10px;
+} 
+.submenu4, .submenu5, .submenu6 {
+    right: 0;
+}
+
+/* .menu-link:hover+.submenu>li {
+    visibility: visible;
+} */
+
+.container {
+    background: silver;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: 'Spoqa Han Sans', 'Sans-serif';
+    font-weight: 400;
+    color: #181818;
+    background-color: #FFF;
+    /*기본값이 400이지만 명시적으로 표시*/
+}
+
+.header,
+.visual,
+.main,
+.slogun,
+.footer {
+    width: 940px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+.header {
+    background: #FFF;
+    padding: 0 30px 30px 30px;
+    border-radius: 0 0 15px 15px;
+    position: relative;
+}
+
+/* 로고 영역 */
+.logo {
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    left: 65px;
+}
+
+/* 멤버 링크 영역 */
+.member {
+    padding-left: 0;
+    list-style-type: none;
+    text-align: right;
+    font-size: 0;
+    color: #181818;
+    text-transform: uppercase;
+    padding: 2px 0;
+    margin-right: -10px;
+    /* position: relative;
+    right : -10px; */
+}
+
+.member li,
+.member a {
+    display: inline-block;
+}
+
+.member li {
+    font-size: 1.4rem;
+}
+
+.member li>a {
+    padding: 8px 10px;
+}
+
+/* .member li:last-child>a {
+    padding-right: 0;
+} */
+
+
+
+
+
+
+.visual {
+    height: 10vh;
+    background: blue;
+}
+
+/* 메인 콘텐츠 */
+.main {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    /* justify-content: space-evenly;  */
+    justify-content: space-between;
+    padding: 30px;
+    height: 60vh;
+    background: yellow;
+}
+
+
+
+.group1 {
+    width: 250px;
+    background: pink;
+}
+
+.group2 {
+    width: 380px;
+    background: orange;
+}
+
+.group3 {
+    width: 190px;
+    background: blueviolet;
+}
+
+.slogun {
+    height: 10vh;
+    background: tomato;
+}
+
+.footer-bg {
+    width: 100%;
+    background: violet;
+
+}
+
+.footer {
+    height: 10vh;
+    background: lime;
+}
