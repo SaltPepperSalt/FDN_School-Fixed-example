@@ -1,4 +1,5 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(/css/fontello.css);
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
 /* 기본 박스 사이징 */
 
@@ -89,7 +90,7 @@ html {
 
 /* 메인 메뉴 */
 .navigation {
-    padding-bottom: 12px;
+    padding-bottom: 10px;
 }
 
 .menu {
@@ -110,7 +111,16 @@ html {
     border-left: 2px solid rgba(255, 255, 255, .5);
     position: relative;
 }
-
+.menu-item-act .submenu{
+    width: auto;
+    height: auto;
+    position: absolute;
+    clip: auto;
+}
+.menu-item-act .menu-link{
+    color: yellow;
+    box-shadow: 0 2px black;
+}
 .menu-link {
     display: block;
     color: #FFF;
@@ -120,17 +130,13 @@ html {
     padding: 0 20px;
     text-shadow: 1px 0 black, -1px 0 black, 0 1px black, 0 -1px black;
 }
-.menu-link:focus{
-    color: yellow;
-    border-bottom: 2px solid black;
-}
 
-.menu-link:focus + .submenu{
+/* .menu-link:focus + .submenu{
     width: auto;
     height: auto;
     position: absolute;
     clip: auto;
-}
+} */
 .submenu {
     white-space: nowrap;
     padding-left: 0;
@@ -143,9 +149,16 @@ html {
 }   
 .submenu li {
     display: inline-block;
-    margin: 10px;
+    margin-right: 10px;
 } 
-.submenu4, .submenu5, .submenu6 {
+.submenu li a {
+    display: block;
+    padding: 12px 0;
+}
+.menu > li:nth-child(1) .submenu, .menu > li:nth-child(2) .submenu, .menu > li:nth-child(3) .submenu {
+    left: 0;
+}
+.menu > li:nth-child(4) .submenu, .menu > li:nth-child(5) .submenu, .menu > li:nth-child(6) .submenu {
     right: 0;
 }
 
