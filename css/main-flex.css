@@ -102,81 +102,67 @@ html {
     /* box-shadow: 0 -2px 0 0 #181818; */
     margin: 5px 0 0;
     padding-left: 239px;
-    text-align: right;
-    height: 47px;
+    display: flex;
 }
 
-.menu-item {
-    float: left;
-    margin-right: -4px;
-    border-left: 2px solid rgba(255, 255, 255, .5);
+.menu-item{
+    border-left: 1px solid white;
     position: relative;
 }
-
-.menu-item-act .submenu {
-    width: auto;
-    height: auto;
+.menu-item-act{
+    position: relative;
+}
+.submenu{
+    padding-left: 0;
+    list-style-type: none;
+    display: none;
     position: absolute;
-    clip: auto;
+}
+.submenu a{
+  display: block;
+  padding:10px;
 }
 
-.menu-item-act .menu-link {
-    color: yellow;
-}
-.menu-item-act .menu-link::after {
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: #181818;
-}
+
 .menu-link {
-    display: block;
     color: #FFF;
+    display: block;
     font-weight: 700;
     font-size: 1.6rem;
-    line-height: 45px;
-    padding: 0 20px;
     text-shadow: 1px 0 black, -1px 0 black, 0 1px black, 0 -1px black;
+    padding: 0 19px;
+    line-height: 45px;
+}
+.menu-item-act .submenu{
+    display: flex;
+    white-space: nowrap;
 }
 
+.menu-item-act .menu-link{
+    color: yellow;
+}
+.menu-item-act .menu-link::after{
+    content: "";
+    display: block;
+    border-bottom: 2px solid black;
+    bottom: 0;
+}
+
+
+
+.menu-item:nth-child(4) .submenu,
+.menu-item:nth-child(5) .submenu,
+.menu-item:nth-child(6) .submenu{
+    right: 0;
+}
 /* .menu-link:focus + .submenu{
     width: auto;
     height: auto;
     position: absolute;
     clip: auto;
 } */
-.submenu {
-    white-space: nowrap;
-    padding-left: 0;
-    list-style-type: none;
-    position: absolute;
-    overflow: hidden;
-    width: 1px;
-    height: 1px;
-    clip: rect(0, 0, 0, 0);
-}
 
-.submenu li {
-    display: inline-block;
-    margin-right: 10px;
-}
 
-.submenu li a {
-    display: block;
-    padding: 12px 0;
-}
-
-.menu>li:nth-child(1) .submenu,
-.menu>li:nth-child(2) .submenu,
-.menu>li:nth-child(3) .submenu {
-    left: 0;
-}
-
-.menu>li:nth-child(4) .submenu,
-.menu>li:nth-child(5) .submenu,
-.menu>li:nth-child(6) .submenu {
-    right: 0;
-}
 
 /* .menu-link:hover+.submenu>li {
     visibility: visible;
