@@ -40,8 +40,7 @@ html {
 
 /* 메인 메뉴 */
 .navigation {
-    
-    /* padding-bottom: 50px; */
+    padding-bottom: 12px;
 }
 
 .menu {
@@ -49,42 +48,64 @@ html {
     background: #ff6868;
     list-style-type: none;
     border-top: 2px solid #181818;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 5px 5px;
     /* box-shadow: 0 -2px 0 0 #181818; */
     margin: 5px 0 0;
     padding-left: 0;
     text-align: right;
 }
 
-.menu-item,
-.submenu a {
+.menu-item {
+    margin-right: -4px;
     display: inline-block;
+    border-left: 2px solid rgba(255, 255, 255, .5);
+    position: relative;
 }
 
 .menu-link {
-    display: inline-block;
+    display: block;
     color: #FFF;
     font-weight: 700;
     font-size: 1.5rem;
-    margin: 1.6rem 2rem;
-
+    padding: 1.6rem 0;
+    margin: 0 2rem;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-
-.submenu {
-    list-style-type: none;
-    position: absolute;
-    padding-left: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: polygon(0 0, 0 0, 0 0);
+.menu-link:focus{
+    color: yellow;
+    border-bottom: 2px solid black;
 }
 
+.menu-link:focus + .submenu{
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    clip: auto;
+}
+.submenu {
+    padding-left: 0;
+    list-style-type: none;
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0,0,0,0);
+}   
+.submenu li {
+    float: left;
+    margin: 10px;
+} 
+.submenu1, .submenu2, .submenu3 {
+    left:0;
+}
+.submenu4, .submenu5, .submenu6 {
+    right:0;
+}
 
-/* .submenu>li {
-    visibility: hidden;
-} */
+.submenu4 li, .submenu5 li, .submenu6 li {
+    float:right;
+}
+
 
 /* .menu-link:hover+.submenu>li {
     visibility: visible;
@@ -162,9 +183,7 @@ body {
     padding-right: 0;
 } */
 
-.navigation {
-    background: salmon;
-}
+
 
 
 
