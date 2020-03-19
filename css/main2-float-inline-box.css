@@ -38,6 +38,55 @@ html {
     font-size: 10px;
 }
 
+
+/* 헤더 */
+.header {
+    background: #FFF;
+    padding: 0 30px 30px 30px;
+    border-radius: 0 0 15px 15px;
+    position: relative;
+}
+
+/* 로고 영역 */
+.logo {
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    left: 65px;
+}
+
+/* 멤버 링크 영역 */
+.member {
+    padding-left: 0;
+    list-style-type: none;
+    text-align: right;
+    font-size: 0;
+    color: #181818;
+    text-transform: uppercase;
+    padding: 2px 0;
+    margin-right: -10px;
+    /* position: relative;
+    right : -10px; */
+}
+
+.member li,
+.member a {
+    display: inline-block;
+}
+
+.member li {
+    font-size: 1.4rem;
+}
+
+.member li>a {
+    padding: 8px 10px;
+}
+
+/* .member li:last-child>a {
+    padding-right: 0;
+} */
+
+
 /* 메인 메뉴 */
 .navigation {
     padding-bottom: 12px;
@@ -49,10 +98,9 @@ html {
     list-style-type: none;
     border-top: 2px solid #181818;
     border-radius: 0 0 5px 5px;
-    height: 47px;
     /* box-shadow: 0 -2px 0 0 #181818; */
     margin: 5px 0 0;
-    padding-left: 0;
+    padding-left: 239px;
     text-align: right;
 }
 
@@ -61,17 +109,16 @@ html {
     margin-right: -4px;
     border-left: 2px solid rgba(255, 255, 255, .5);
     position: relative;
-    left: 275px;
 }
 
 .menu-link {
     display: block;
     color: #FFF;
     font-weight: 700;
-    font-size: 1.5rem;
-    padding: 1.4rem 0;
-    margin: 0 2rem;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 1.6rem;
+    line-height: 45px;
+    padding: 0 20px;
+    text-shadow: 1px 0 black, -1px 0 black, 0 1px black, 0 -1px black;
 }
 .menu-link:focus{
     color: yellow;
@@ -130,53 +177,6 @@ body {
     width: 940px;
     margin: 0 auto;
 }
-
-/* 헤더 */
-.header {
-    background: #FFF;
-    padding: 0 30px 30px 30px;
-    border-radius: 0 0 15px 15px;
-    position: relative;
-}
-
-/* 로고 영역 */
-.logo {
-    margin: 0;
-    position: absolute;
-    top: 50px;
-    left: 65px;
-}
-
-/* 멤버 링크 영역 */
-.member {
-    padding-left: 0;
-    list-style-type: none;
-    text-align: right;
-    font-size: 0;
-    color: #181818;
-    text-transform: uppercase;
-    padding: 2px 0;
-    margin-right: -10px;
-    /* position: relative;
-    right : -10px; */
-}
-
-.member li,
-.member a {
-    display: inline-block;
-}
-
-.member li {
-    font-size: 1.4rem;
-}
-
-.member li>a {
-    padding: 8px 10px;
-}
-
-/* .member li:last-child>a {
-    padding-right: 0;
-} */
 
 
 
