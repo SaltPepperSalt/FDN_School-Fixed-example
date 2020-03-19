@@ -148,7 +148,9 @@ html {
     bottom: 0;
 }
 
-
+.tab-on{
+    color:red;
+}
 
 .menu-item:nth-child(4) .submenu,
 .menu-item:nth-child(5) .submenu,
@@ -194,13 +196,85 @@ body {
 }
 
 
-
+@keyframes fadeInOut{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes flowBa{
+    0%{
+        left:0;
+        top:0;
+        opacity: 0;
+    }
+    50%{
+        font-size: 20px;
+        left:200px;
+        top:40px;
+    }
+    100%{
+        opacity: 1;
+        font-size: 20px;
+        left:400px;
+        top:80px;
+    }
+}
 
 
 
 .visual {
-    height: 10vh;
-    background: blue;
+    height: 120px;
+    background: url("/images/leafleafback.png");
+    position: relative;
+}
+.visual img {
+    animation-name: fadeInOut;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.maple1 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 100px;
+}
+.maple2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 200px;
+    animation-delay: 1s;
+}
+.maple3 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 400px;
+    animation-delay: 2s;
+    
+}
+.maple4 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 800px;
+    animation-delay: 1.5s;
+}
+.flowBanner {
+    font-weight: 700;
+    position: absolute;
+    animation-name: flowBa;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    transition-duration: 2s;
 }
 
 /* 메인 콘텐츠 */

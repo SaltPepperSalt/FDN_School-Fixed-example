@@ -4,20 +4,17 @@ var subAnchors = $('.submenu a');
 
 subAnchors.attr('class', 'icon-dot-circled');
 
-menuLinks.hover(function (e) {
-    e.preventDefault();
-    menuItems.removeClass('menu-item-act');
-    $(this).parent().addClass('menu-item-act');
-});
 
-subAnchors.on('hover focus', function (e) {
-    if (e.type === 'hover' || e.type === 'focus') {
+subAnchors.on('mouseover focus', function (e) {
+    if (e.type === 'mouseover' || e.type === 'focus') {
         subAnchors.attr('class', 'icon-dot-circled');
         $(this).attr('class', 'icon-ok');
+        $(this).addClass('tab-on');
     }
 });
-
-menuLinks.focus(function (e) {
-    menuItems.removeClass('menu-item-act');
-    $(this).parent().addClass('menu-item-act');
+menuLinks.on('mouseover focus', function (e) {
+    if (e.type === 'mouseover' || e.type === 'focus') {
+        menuItems.removeClass('menu-item-act');
+        $(this).parent().addClass('menu-item-act');
+    }
 });
