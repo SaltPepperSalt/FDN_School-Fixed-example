@@ -108,6 +108,7 @@ html {
 .menu-item{
     border-left: 1px solid white;
     position: relative;
+    padding: 0 19px;
 }
 .menu-item-act{
     position: relative;
@@ -127,11 +128,11 @@ html {
 .menu-link {
     color: #FFF;
     display: block;
+    position: relative;
     font-weight: 700;
     font-size: 1.6rem;
     text-shadow: 1px 0 black, -1px 0 black, 0 1px black, 0 -1px black;
-    padding: 0 19px;
-    line-height: 45px;
+    padding: 15px 0;
 }
 .menu-item-act .submenu{
     display: flex;
@@ -143,9 +144,11 @@ html {
 }
 .menu-item-act .menu-link::after{
     content: "";
+    position: absolute;
+    width: 100%;
     display: block;
     border-bottom: 2px solid black;
-    bottom: 0;
+    bottom: -2px;
 }
 
 .tab-on{
@@ -171,7 +174,7 @@ html {
 } */
 
 .container {
-    background: silver;
+    background: linear-gradient(silver,white);
     display: flex;
     flex-direction: column;
     align-items: center;
