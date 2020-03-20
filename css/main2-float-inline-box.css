@@ -291,6 +291,90 @@ body {
     border-radius: 15px 15px 0 0;
 }
 
+.login{
+    background: tomato;
+    border-radius: 5px;
+    padding: 10px;
+}
+.id-wrapper{
+    display: grid;
+    grid-template: 
+    "uemail btn" auto
+    "upw btn" auto
+    / 160px 55px;
+    align-items: center;
+}
+
+.btn-login{
+    background: tomato;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    margin-left: 5px;
+}
+.user-email{
+    grid-area: uemail;
+    display: flex;
+    justify-content: space-between;
+}
+.user-pw{
+    grid-area: upw;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-login{
+    grid-area:btn;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: none;
+}
+fieldset {
+    border: none;
+    padding: 10px;
+    margin: 0;
+    width: auto;
+}
+fieldset::after{
+    margin-top: 5px;
+    content: "";
+    display: block;
+    height: 1px;
+    background: gray;
+}
+.login input{
+    width: 100px;
+}
+.login legend{
+    display: block;
+    margin: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: rect(0,0,0,0);
+}
+.login-heading{
+    margin-top: 0;
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    color: yellow;
+}
+.login-form{
+    background: white;
+    border-radius: 5px 5px 0 0;
+}
+.login ul {
+    border-radius: 0 0 5px 5px;
+    list-style-type: none;
+    background: white;
+    margin: 0;
+    padding: 0 0 10px 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3rem;
+}
+.icon-right-open::before{
+    color: tomato;
+}
 .slogun {
     height: 10vh;
     background: tomato;

@@ -92,24 +92,29 @@
                 <section class="login">
                     <h2 class='login-heading'>로그인</h2>
                     <form action="https://formspree.io/mpzljyyp" method="POST" class="login-form">
+
                         <fieldset>
-                            <legend>회원로그인 폼</legend>
-                            <div class="user-Email">
-                                <label for="userEmail">로그인</label>
-                                <input type="email" id="userEmail" name="userEmail" required placeholder="guest@webcafe.com"/>
+                            <div class="id-wrapper">
+                                <legend>회원로그인 폼</legend>
+                                <div class="user-email">
+                                    <label for="userEmail">아이디</label>
+                                    <input type="email" id="userEmail" name="userEmail" required
+                                        placeholder="guest@webcafe.com" />
+                                </div>
+                                <div class="user-pw">
+                                    <label for="userPw">비밀번호</label>
+                                    <input type="password" id="userPw" name="password" required placeholder="8자리 이하"
+                                        maxlength="8">
+                                </div>
+                                <button type="submit" class="btn-login">
+                                    로그인
+                                </button>
                             </div>
-                            <div class="user-pw">
-                                <label for="userPw">비밀번호</label>
-                                <input type="password" id="userPw" name="password" required placeholder="8자리 이하" maxlength="8">
-                            </div>
-                            <button type="submit" class="btn-login">
-                                로그인
-                            </button>
                         </fieldset>
                     </form>
                     <ul>
-                        <li><a href="#" class="register">회원가입</a></li>
-                        <li><a href="#" class="memberSearch">아이디/비밀번호 찾기</a></li>
+                        <li><a href="#" class="register icon-right-open">회원가입</a></li>
+                        <li><a href="#" class="memberSearch icon-right-open">아이디/비밀번호 찾기</a></li>
                     </ul>
                 </section>
             </div>
