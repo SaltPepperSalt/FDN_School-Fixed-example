@@ -185,7 +185,6 @@ html {
 } */
 
 .container {
-    background: linear-gradient(lightgray, white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -196,7 +195,8 @@ body {
     font-family: 'Spoqa Han Sans', 'Sans-serif';
     font-weight: 400;
     color: #181818;
-    background-color: #FFF;
+    background: url(/css/images/bg_flower.png) no-repeat 50% 0, 
+    #ccc linear-gradient(#ccc, #eee, #fff) repeat;
     /*기본값이 400이지만 명시적으로 표시*/
 }
 
@@ -260,14 +260,14 @@ body {
 }
 
 .visual::before {
-    background: url(./images/ani_flower_01.png) no-repeat 0 -10px, 
-    url("./images/ani_flower_02.png") no-repeat 85% 20px;
+    background: url(./images/ani_flower_01.png) no-repeat 0 -10px,
+        url("./images/ani_flower_02.png") no-repeat 85% 20px;
 }
 
 .visual::after {
     animation-delay: 1s;
-    background: url("./images/ani_flower_03.png") no-repeat 30% 0px, 
-    url("./images/ani_flower_04.png") no-repeat 95% 20px;
+    background: url("./images/ani_flower_03.png") no-repeat 30% 0px,
+        url("./images/ani_flower_04.png") no-repeat 95% 20px;
 }
 
 .visual-text {
