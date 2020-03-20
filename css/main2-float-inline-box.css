@@ -123,12 +123,14 @@ html {
 .menu-item-act .menu-link {
     color: yellow;
 }
+
 .menu-item-act .menu-link::after {
     content: "";
     display: block;
     height: 2px;
     background-color: #181818;
 }
+
 .menu-link {
     display: block;
     color: #FFF;
@@ -183,7 +185,7 @@ html {
 } */
 
 .container {
-    background: silver;
+    background: linear-gradient(lightgray, white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,11 +212,68 @@ body {
 
 
 
+/*  비주얼  */
+
+@keyframes textAni {
+    0% {
+        opacity: 0;
+        /* top: 0; */
+        /* left: 0; */
+        transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        /* top: 60%; */
+        /* left: 45%; */
+        transform: translate(400px, 75px);
+        font-size: 24px;
+        font-weight: 400;
+    }
+}
+
+@keyframes flowerOpa {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 
 .visual {
-    height: 10vh;
-    background: blue;
+    height: 120px;
+    position: relative;
+}
+
+.visual::before,
+.visual::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.visual::before {
+    animation: flowerOpa 2s infinite 1s alternate;
+    background: url("./images/ani_flower_01.png") no-repeat 0 -10px, url("./images/ani_flower_02.png") no-repeat 85% 20px;
+}
+
+.visual::after {
+    animation: flowerOpa 2s infinite alternate;
+    background: url("./images/ani_flower_03.png") no-repeat 30% 0px, url("./images/ani_flower_04.png") no-repeat 95% 20px;
+}
+
+.visual-text {
+    /* position: absolute; */
+    opacity: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: textAni .5s forwards ease-in-out 1s;
+    display: inline-block;
 }
 
 /* 메인 콘텐츠 */
