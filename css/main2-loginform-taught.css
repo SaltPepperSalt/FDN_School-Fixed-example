@@ -446,7 +446,16 @@ fieldset::after {
 .validation a:hover{
     color: red;
 }
+/* definition */
 
+.term {
+    width: 250px;
+}
+
+.term dd {
+    clear: both;
+    margin: 0;
+}
 
 /* 슬로건 */
 .slogun {
