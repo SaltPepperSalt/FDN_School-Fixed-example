@@ -20,7 +20,8 @@ a {
 }
 
 /* 유틸리티 */
-.a11y-hidden {
+.a11y-hidden,
+legend {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -183,6 +184,7 @@ html {
 .tab-on {
     color: red;
 }
+
 /* .menu-link:hover+.submenu>li {
     visibility: visible;
 } */
@@ -198,8 +200,8 @@ body {
     font-family: 'Spoqa Han Sans', 'Sans-serif';
     font-weight: 400;
     color: #181818;
-    background: url(/css/images/bg_flower.png) no-repeat 50% 0, 
-    #ccc linear-gradient(#ccc, #eee, #fff) repeat;
+    background: url(/css/images/bg_flower.png) no-repeat 50% 0,
+        #ccc linear-gradient(#ccc, #eee, #fff) repeat;
     /*기본값이 400이지만 명시적으로 표시*/
 }
 
@@ -293,91 +295,135 @@ body {
     background-color: #FFF;
     border-radius: 15px 15px 0 0;
 }
+
 /* 로그인 */
-.login{
-    background: tomato;
+fieldset{
+    padding: 0;
+    margin: 0;
+}
+.login {
+    /* 내코드 */
+    /* background: radial-gradient(farthest-corner at 100% 0%,#e8852e,#ed552f) tomato; */
+    background-color: #e8852e;
+    border-image: radial-gradient(circle at right top, #e8852e, #ed552f);
     border-radius: 5px;
     padding: 10px;
-}
-.id-wrapper{
-    display: grid;
-    grid-template: 
-    "uemail btn" auto
-    "upw btn" auto
-    / 160px 55px;
-    align-items: center;
+    box-shadow: 5px 5px #CCC;
+    width: 250px;
 }
 
-.btn-login{
-    background: tomato;
-    border-radius: 5px;
-    color: white;
-    font-size: 1.2rem;
-    margin-left: 5px;
+.login-heading {
+    margin-top: 0;
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: yellow;
 }
-.user-email{
-    grid-area: uemail;
-    display: flex;
-    justify-content: space-between;
+
+.login-form, .sign {
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-.user-pw{
-    grid-area: upw;
-    display: flex;
-    justify-content: space-between;
+
+.login-form {
+    padding-top: 10px;
 }
-.btn-login{
-    grid-area:btn;
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    border: none;
+
+.sign {
+    border-radius: 0 0 5px 5px;
+    list-style-type: none;
+    margin: 0;
+    /* flex,inline-block 사용시 */
+    /* padding: 0 0 10px 0; */
+    /*float 사용시 */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.3rem;
+    /* display: flex;
+    justify-content: space-between; */
 }
+
 fieldset {
     border: none;
-    padding: 10px;
-    margin: 0;
-    width: auto;
+    width: 210px;
+    position: relative;
 }
-fieldset::after{
-    margin-top: 5px;
+
+fieldset::after {
+    margin-top: 60px;
     content: "";
     display: block;
     height: 1px;
     background: gray;
 }
-.login input{
-    width: 100px;
+
+.user-pw,
+.user-email {
+    float: left;
+    margin-bottom: 5px;
 }
-.login legend{
-    display: block;
-    margin: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: rect(0,0,0,0);
+
+.login-form label {
+    display: inline-block;
+    width: 55px;
 }
-.login-heading{
-    margin-top: 0;
-    margin-left: 1rem;
-    font-size: 1.6rem;
-    color: yellow;
+
+/* .login-form input {
+    width: 95px;
+    height: 24px;
+    padding: 1px 1px 1px 5px;
+    border : solid 1px #ccc;
+} */
+
+[name^="user"]{
+    width: 95px;
+    height: 24px;
+    padding: 1px 1px 1px 5px;
+    border : solid 1px #ccc;
 }
-.login-form{
-    background: white;
-    border-radius: 5px 5px 0 0;
+.btn-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ed552f;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    /* 그리드 사용시 */
+    /* margin-left: 5px; */
+    /* grid-area: btn; */
+    width: 50px;
+    height: 53px;
+    padding: 0;
+    border: 2px solid #f8953e
 }
-.login ul {
-    border-radius: 0 0 5px 5px;
-    list-style-type: none;
-    background: white;
-    margin: 0;
-    padding: 0 0 10px 0;
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.3rem;
+
+
+
+
+.login ul li {
+    display: inline-block;
 }
-.icon-right-open::before{
+
+/* float 사용시 */
+/* .login ul li:first-child {
+    float: left;
+}
+.login ul li:last-child {
+    float: right;
+} */
+
+/* inline-block 사용시 */
+.login ul li:last-child {
+    margin-left: 5px;
+}
+
+.icon-right-open::before {
     color: tomato;
 }
+
 .slogun {
     height: 10vh;
     background: tomato;
