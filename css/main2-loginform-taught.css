@@ -424,6 +424,31 @@ fieldset::after {
     color: tomato;
 }
 
+
+/* 유효성 검사 배너 링크 */
+
+.validation-list{
+    padding-left: 0;
+    margin: 25px 0 20px;
+    list-style-type: none
+}
+.validation a {
+    border: 1px solid gray;
+    border-radius: 30px;
+    background: url(./images/validation_icon.png) no-repeat 13px 50%,linear-gradient(#ccc, white) #ccc;
+    line-height: 30px;
+    text-indent: 35px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    display: block;
+}
+
+.validation a:hover{
+    color: red;
+}
+
+
+/* 슬로건 */
 .slogun {
     height: 10vh;
     background: tomato;
