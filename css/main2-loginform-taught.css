@@ -345,13 +345,13 @@ fieldset{
     justify-content: space-between; */
 }
 
-fieldset {
+.login-form fieldset {
     border: none;
     width: 210px;
     position: relative;
 }
 
-fieldset::after {
+.login-form fieldset::after {
     margin-top: 60px;
     content: "";
     display: block;
@@ -535,7 +535,37 @@ dd, dl{
 .term-list-brief{
     width: 145px;
 } */
+/* 자료검색 */
+.search {
+    border: 1px solid #aaa;
+    width: 380px;
+    padding: 20px 27px 15px;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(#ccc, #eee) #ccc;
+}
+.search-form fieldset {
+    border: none;
+    height: 25px;
 
+}
+#search {
+    height: 25px;
+    width: 200px;
+    margin-left: 5px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+.btn-search {
+    height: 25px;
+    background: black;
+    color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 5px 10px;
+    vertical-align: top;
+}
 /* 슬로건 */
 .slogun {
     height: 10vh;
