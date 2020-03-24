@@ -446,16 +446,95 @@ fieldset::after {
 .validation a:hover{
     color: red;
 }
-/* definition */
+/* 웹 관련 용어 */
 
 .term {
     width: 250px;
+    padding: 15px;
+    background: linear-gradient(#ccc, #eee) #ccc;
+    border-radius: 10px;
+    border: 1px solid #bbbbbb;
 }
-
-.term dd {
-    clear: both;
+dd, dl{
     margin: 0;
 }
+.term-heading {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.5rem;
+}
+.term-list-brief{
+    line-height: 20px;
+}
+/* 웹 관련 용어- float편 */
+
+.term div{
+    overflow: hidden;
+}
+.term-list-thumbnail {
+    float: left;
+}
+.term-list-subject, .term-list-brief{
+    width: 145px;
+    float: right;
+}
+.term-list-subject{
+    color: #296867;
+    margin-bottom: 5px;
+}
+.even{
+    margin-top: 20px;
+}
+.even .term-list-thumbnail {
+    float: right;
+}
+.even .term-list-subject, .even .term-list-brief{
+    float: left;
+}
+/* 웹 관련 용어 -position편 */
+/* .term {
+    height: 150px;
+}
+.term-list {
+    position: relative;
+}
+.term-list-subject,
+.term-list-thumbnail,
+.term-list-brief{
+    position: absolute;
+}
+.term-list-thumbnail{
+    left:0;
+    top:0;
+}
+.term-list-subject {
+    left:75px;
+    top:0;
+}
+.term-list-brief{
+    left:75px;
+    top:20px
+} */
+
+/* 웹 관련 용어 flex편 */
+/* .term {
+    height: 150px;
+}
+.term-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 85px;
+}
+.term-list-subject {
+    color: #296867;
+}
+.term-list-thumbnail{
+    order: -1;
+}
+.term-list-brief{
+    width: 145px;
+} */
 
 /* 슬로건 */
 .slogun {
