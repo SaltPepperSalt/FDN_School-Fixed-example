@@ -756,8 +756,86 @@ dl {
 /* 새소식 */
 .news {
     position: relative;
+    margin-top: 20px;
+}
+.news-heading {
+    font-size: 1.4rem;
+    color: orangered;
+    margin: 0;
+}
+.news-heading::after{
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: 15px;
+    background: linear-gradient(to right, #bbb, #eee) #ccc;
+}
+.news h3 {
+    font-size: 1.4rem;
+    margin: 0;
 }
 
+.news .more {
+    display: block;
+    background: #fff;
+    padding: 15px;
+}
+.news-item-thumbnail img{
+    box-shadow: 0 10px 20px 5px#ccc;
+}
+figcaption{
+    margin-top: 15px;
+    text-align: center;
+}
+/* news position ver */
+.news-link {
+    display: block;
+    width: 380px;
+    padding-left: 130px;
+    margin-top: 20px;
+    position: relative;
+    right: 0;
+}
+.news-item-thumbnail {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0; 
+}
+/* news float ver */
+/* .news-item-thumbnail {
+    float: left;
+    margin: -30px 0 0 0;
+}
+.news-item h3,
+.news-item-brief,
+.news-item-date{
+    float: right;
+    width: 240px;
+}
+.news-item h3 {
+    margin-top: 20px;
+} */
+/* news flex ver */
+/* .news-link {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 130px;
+    margin-top: 20px;
+}
+.news-item-thumbnail{
+    margin: 0;
+    order: -1;
+    align-self: flex-start;
+    padding-bottom: 50px;
+}
+.news-item h3,
+.news-item-brief,
+.news-item-date{
+    width: 240px;
+    align-self: flex-end;
+} */
 /* 슬로건 */
 .slogun {
     height: 10vh;
