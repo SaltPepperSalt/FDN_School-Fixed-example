@@ -556,7 +556,7 @@ dl {
 .search {
     border: 1px solid #aaa;
     padding: 15px 25px 10px;
-    border-bottom-color: whiteb;
+    border-bottom-color: white;
     border-radius: 20px 20px 0 0;
     background: linear-gradient(#ccc, #eee) #ccc;
 }
@@ -724,7 +724,7 @@ dl {
     margin-top: 0;
     margin-bottom: 0;
     display: none;
-    min-height: 160px;
+    min-height: 135px;
 }
 .board-act ul {
     display: block;
@@ -758,28 +758,35 @@ dl {
     position: relative;
     margin-top: 20px;
 }
+.news::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    top: 35px;
+    left: 0;
+    background: linear-gradient(to right, #ccc, #eee) #ccc;
+}
 .news-heading {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: orangered;
     margin: 0;
 }
-.news-heading::after{
-    content: "";
-    display: block;
-    height: 1px;
-    margin-top: 15px;
-    background: linear-gradient(to right, #bbb, #eee) #ccc;
-}
-.news h3 {
+
+.news-item-subject {
     font-size: 1.4rem;
     margin: 0;
 }
-
-.news .more {
+.news-item-date {
     display: block;
-    background: #fff;
-    padding: 15px;
+    margin-top: 5px;
 }
+.news-item-brief{
+    margin: 5px 0 0 0;
+    line-height: 1.5;
+}
+
+
 .news-item-thumbnail img{
     box-shadow: 0 10px 20px 5px#ccc;
 }
@@ -787,8 +794,11 @@ figcaption{
     margin-top: 15px;
     text-align: center;
 }
+.news .more {
+    display: block;
+}
 /* news position ver */
-.news-link {
+/* .news-link {
     display: block;
     width: 380px;
     padding-left: 130px;
@@ -801,11 +811,11 @@ figcaption{
     position: absolute;
     left: 0;
     top: 0; 
-}
+} */
 /* news float ver */
-/* .news-item-thumbnail {
-    float: left;
-    margin: -30px 0 0 0;
+.news-item-thumbnail{
+    margin: 40px 0 0 0;
+    width: 112px;
 }
 .news-item h3,
 .news-item-brief,
@@ -813,16 +823,14 @@ figcaption{
     float: right;
     width: 240px;
 }
-.news-item h3 {
-    margin-top: 20px;
-} */
+
 /* news flex ver */
 /* .news-link {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     height: 130px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .news-item-thumbnail{
     margin: 0;
