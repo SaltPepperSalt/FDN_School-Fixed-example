@@ -1,8 +1,11 @@
 var menuItems = $('.menu-item');
 var menuLinks = $('.menu-link');
 var subAnchors = $('.submenu a');
+var listAnchors = $('.board ul li a');
+var boardHeading = $('.board section h2')
 
 subAnchors.attr('class', 'icon-dot-circled');
+listAnchors.attr('class', 'icon-dot-circled');
 
 
 subAnchors.on('mouseover focus', function (e) {
@@ -17,4 +20,10 @@ menuLinks.on('mouseover focus', function (e) {
         menuItems.removeClass('menu-item-act');
         $(this).parent().addClass('menu-item-act');
     }
+});
+
+boardHeading.click(function (e) {
+    boardHeading.parent().removeClass('board-act');
+    $(this).parent().addClass('board-act');
+    return false;
 });
