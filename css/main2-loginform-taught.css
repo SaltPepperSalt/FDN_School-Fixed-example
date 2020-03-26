@@ -684,11 +684,12 @@ dl {
     color: hsla(110, 50%, 30%, 1);
 } */
 
-.board  {
+.board {
     position: relative;
     padding-top: 50px;
     margin-top: 20px;
 }
+
 .board h2 {
     position: absolute;
     top: 0;
@@ -696,28 +697,38 @@ dl {
     font-size: 1.4rem;
     font-weight: 400;
 }
+
 .notice-heading {
     left: 0;
 }
+
 .pds-heading {
     left: 73px;
 }
+
 .tab {
     display: block;
     padding: 8px 10px;
     border: 1px solid #aaa;
     color: #999;
-    background: linear-gradient(#ccc,#eee) #ccc;
+    background: linear-gradient(#ccc, #eee) #ccc;
     border-radius: 5px 5px 0 0;
 }
+
 .board-act .tab {
     border-color: #ed552f #ed552f #fff #ed552f;
     color: #ed552f;
     background: #fff;
 }
+
 .board-act h2 {
     z-index: 10;
 }
+
+.board .more {
+    display: none;
+}
+
 .board ul {
     list-style-type: none;
     padding-left: 0;
@@ -726,12 +737,15 @@ dl {
     display: none;
     min-height: 135px;
 }
+
 .board-act ul {
     display: block;
 }
+
 .board li {
     margin-bottom: 8px;
 }
+
 .board ul a {
     display: inline-block;
     width: 300px;
@@ -740,25 +754,29 @@ dl {
     text-overflow: ellipsis;
     vertical-align: bottom;
 }
+
 .more {
-    display: none;
     position: absolute;
     top: -8px;
     right: -8px;
     padding: 8px;
 }
+
 .board-act .more {
     display: block;
 }
+
 .more .icon-plus {
-    color: hsla(110, 50%, 30%, 1); 
+    color: hsla(110, 50%, 30%, 1);
 }
+
 /* 새소식 */
 .news {
     position: relative;
     margin-top: 20px;
 }
-.news::before{
+
+.news::before {
     content: "";
     position: absolute;
     width: 80%;
@@ -767,6 +785,7 @@ dl {
     left: 0;
     background: linear-gradient(to right, #ccc, #eee) #ccc;
 }
+
 .news-heading {
     font-size: 1.5rem;
     color: orangered;
@@ -777,26 +796,29 @@ dl {
     font-size: 1.4rem;
     margin: 0;
 }
+
 .news-item-date {
     display: block;
     margin-top: 5px;
 }
-.news-item-brief{
+
+.news-item-brief {
     margin: 5px 0 0 0;
     line-height: 1.5;
 }
 
 
-.news-item-thumbnail img{
+.news-item-thumbnail img {
     box-shadow: 0 10px 20px 5px#ccc;
 }
-figcaption{
+
+figcaption {
     margin-top: 15px;
     text-align: center;
 }
-.news .more {
-    display: block;
-}
+
+
+
 /* news position ver */
 /* .news-link {
     display: block;
@@ -813,13 +835,14 @@ figcaption{
     top: 0; 
 } */
 /* news float ver */
-.news-item-thumbnail{
+.news-item-thumbnail {
     margin: 40px 0 0 0;
     width: 112px;
 }
+
 .news-item h3,
 .news-item-brief,
-.news-item-date{
+.news-item-date {
     float: right;
     width: 240px;
 }
@@ -844,6 +867,108 @@ figcaption{
     width: 240px;
     align-self: flex-end;
 } */
+
+/* 이벤트 탭 */
+
+em {
+    font-style: normal;
+}
+
+.event {
+    border: 1px solid #aaa;
+    /* padding: 10px; */
+    position: relative;
+    /* background: linear-gradient(#ccc, #eee) #ccc; */
+    border-radius: 5px 5px 0 0;
+}
+
+.event-heading {
+    width: auto;
+    font-size: 1.5rem;
+    margin: 2px 0 0 0;
+}
+
+.point-color {
+    color: #ed552f;
+}
+
+.event-image {
+    border: 1px solid #aaa;
+    box-shadow: 5px 5px #aaa;
+}
+
+
+
+
+.btn-event {
+    /* background: yellow; */
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* font-size: 0; */
+    /* width: 40px; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+[class^="btn-event-"] {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: url(./images/back_forward.png) no-repeat;
+    cursor: pointer;
+    padding: 0;
+    text-indent: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.btn-event-next {
+    background-position: -36px 0;
+}
+
+/*  test용
+
+width: 20px;
+height : 20px;
+padding: 0;
+text-indent: 20px;
+white-space : nowrap;
+overflow : hidden;
+border: 0;
+*/
+
+.event-brief::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #ccc;
+    margin-top: 10px;
+}
+
+.relsite {
+    padding: 10px;
+}
+
+.relsite-heading {
+    font-size: 1.5rem;
+}
+
+.relsite-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 25px;
+}
+
+.relsite-list li {
+    margin: 5px 10px;
+}
+
 /* 슬로건 */
 .slogun {
     height: 10vh;
@@ -860,9 +985,11 @@ figcaption{
     height: 10vh;
     background: lime;
 }
+
 .group1 {
     width: 250px;
 }
+
 .group2 {
     width: 380px;
 }
@@ -870,4 +997,3 @@ figcaption{
 .group3 {
     width: 190px;
 }
-
