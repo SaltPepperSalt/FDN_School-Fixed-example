@@ -869,17 +869,19 @@ figcaption {
 } */
 
 /* 이벤트 탭 */
+.gradient-box {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: linear-gradient(#ccc, #eee) #ccc;
+}
 
 em {
     font-style: normal;
 }
 
 .event {
-    border: 1px solid #aaa;
-    /* padding: 10px; */
     position: relative;
-    /* background: linear-gradient(#ccc, #eee) #ccc; */
-    border-radius: 5px 5px 0 0;
 }
 
 .event-heading {
@@ -900,16 +902,11 @@ em {
 
 
 
-.btn-event {
-    /* background: yellow; */
+/* .btn-event {
     overflow: hidden;
     position: absolute;
     top: 10px;
     right: 10px;
-    /* font-size: 0; */
-    /* width: 40px; */
-    /* display: flex; */
-    /* justify-content: space-between; */
 }
 
 [class^="btn-event-"] {
@@ -925,6 +922,38 @@ em {
 }
 
 .btn-event-next {
+    background-position: -36px 0;
+} */
+.btn-event {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.btn-event-prev,
+.btn-event-next {
+    position: relative;
+    width: 19px;
+    height: 18px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    background-color: pink;
+    cursor: pointer;
+}
+
+.btn-event-prev::after,
+.btn-event-next::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url(./images/back_forward.png) no-repeat 0 0;
+}
+
+.btn-event-next::after {
     background-position: -36px 0;
 }
 
@@ -947,43 +976,234 @@ border: 0;
     margin-top: 10px;
 }
 
-.relsite {
-    padding: 10px;
+/* 관련 사이트 */
+
+.related {
+    margin-top: 10px;
 }
 
-.relsite-heading {
+.related-heading {
     font-size: 1.5rem;
+    margin: 0;
 }
 
-.relsite-list {
+.related-list {
     list-style-type: none;
-    padding-left: 0;
-    margin: 0;
+    margin: 10px 0 0 0;
+    padding-left: 0px;
     border: 1px solid #ccc;
     overflow: hidden;
     border-radius: 5px;
-    height: 25px;
+    height: 27px;
+    background-color: #fff;
+    transition: height 1s, padding .5s .1s;
+    /* transition: all 2s    모두 2초*/
+    /* transition-property: height, padding;
+    transition-duration: 1s, .5s;
+    transition-delay: 0s, .1s;*/
 }
 
-.relsite-list li {
-    margin: 5px 10px;
+.related-list:hover {
+    height: 147px;
+    padding: 10px 0;
 }
+
+.related-list li a {
+    line-height: 25px;
+    /* padding-left: 20px; */
+    text-indent: 20px;
+    display: block;
+}
+
+.related-list li a:focus {
+    outline: 1px solid #292929;
+    outline-offset: -4px;
+}
+
+/* 인기 사이트 */
+
+.favorite {
+    position: relative;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.favorite-heading {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.favorite .more {
+    top: 2px;
+    right: 2px;
+}
+
+.favorite-list {
+    padding-left: 0;
+    margin: 10px 0 0 0;
+    list-style-type: none;
+    counter-reset: listCounter;
+}
+
+.favorite-list li {
+    margin: 10px 0 0 0;
+    /* position: relative; */
+    counter-increment: listCounter;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.favorite-list li a {
+    flex-grow: 1;
+}
+
+.up,
+.down,
+.stop {
+    /* position: absolute; */
+    width: 9px;
+    height: 11px;
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 11px;
+    background: url(./images/rank.png) no-repeat;
+    /* right: 0;
+    top: 50%;
+    margin-top: -5px; */
+    /* flex-grow: 0; */
+}
+.down{
+    background-position: 0 100%;
+}
+.stop {
+    background-position: 0 50%;
+}
+.favorite-list li {
+    line-height: 14px;
+}
+
+.favorite li::before {
+    content: counter(listCounter);
+    color: #fff;
+    border-radius: 2px;
+    padding: 1px 6px;
+    background: #aaa;
+    margin-right: 3px;
+    font-size: 1.2rem;
+    /* flex-grow: 0; */
+}
+
+/* .favorite .up::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(./images/rank.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+
+
+.favorite .stop::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(./images/rank.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.favorite .down::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(./images/rank.png);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+} */
 
 /* 슬로건 */
+/* .slogun{
+    padding-top: 20px;
+    position: relative;
+    background: #fff;
+}
+.slogun-heading{
+    margin:0 0 0 40px;
+    display: inline;
+}
+.slogun-heading::after {
+    content: "";
+    display: block;
+    background-image: url(./images/coffee.png);
+    width: 110px;
+    height: 83px;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+}
+.slogun-content {
+    display: inline-block;
+    width: 660px;
+    color: #a09784;
+    position: relative;
+    margin-left: 80px;
+}
+.slogun-content q::before{
+    font-size: 35px;
+    position: absolute;
+    top: -10px;
+    left: -15px;
+}
+.slogun-content q::after{
+    content: "";
+} */
 .slogun {
-    height: 10vh;
-    background: tomato;
+    padding: 0 70px 0 180px;
+    position: relative;
+    background-color: #fff;
 }
-
-.footer-bg {
+.slogun-heading {
+    width: 110px;
+    height: 83px;
+    text-align: center;
+    line-height: 83px;
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 400;
+    position: absolute;
+    left: 35px;
+    bottom: -25px;
+}
+.slogun-heading::after{
+    content: "";
     width: 100%;
-    background: violet;
-
+    height: 100%;
+    background: url(./images/coffee.png) no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
-.footer {
-    height: 10vh;
-    background: lime;
+.slogun-content{
+    color: #a09784;
+
+}
+.slogun-content q::after{
+    content: "";
+}
+.slogun-content q::before{
+    font-size: 3.5rem;
+    position: relative;
+    top: 10px;
 }
 
 .group1 {
@@ -996,4 +1216,9 @@ border: 0;
 
 .group3 {
     width: 190px;
+}
+/* 푸터 */
+.footer-bg {
+    background: #ccc linear-gradient(#ccc, #fff);
+    height: 150px;
 }
