@@ -189,11 +189,7 @@ html {
     visibility: visible;
 } */
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 body {
     font-size: 1.4rem;
@@ -1194,6 +1190,8 @@ border: 0;
 }
 
 .slogun-content{
+    margin: 0;
+    padding-bottom: 10px;
     color: #a09784;
 
 }
@@ -1218,7 +1216,48 @@ border: 0;
     width: 190px;
 }
 /* 푸터 */
+.footer{
+    position: relative;
+    padding: 0 0 0 30px;
+    display: flex;
+}
+.footer-content{
+    width: 680px;
+    margin: 0;
+}
 .footer-bg {
     background: #ccc linear-gradient(#ccc, #fff);
     height: 150px;
+}
+.footer-heading {
+    margin-top: 25px;
+    margin-right: 20px;
+}
+.footer-list {
+    color: #fff;
+    margin: 20px 0;
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    width: 680px;
+    justify-content: space-evenly;
+    background: #999;
+    border-radius: 10px;
+}
+.footer-list li {
+    margin: 0;
+}
+.footer-list a {
+    display: block;
+    padding: 15px 0;
+}
+.htmlcss-logo {
+    width: 85px;
+    height: 60px;
+    position: absolute;
+    background-image: url(../images/html5_logo.png), url(../images/css3_logo.png);
+    background-repeat: no-repeat;
+    background-position: 0 0, 45px 0;
+    right: 0;
+    top: 0;
 }
