@@ -1215,6 +1215,8 @@ border: 0;
 .group3 {
     width: 190px;
 }
+
+
 /* 푸터 */
 .footer{
     position: relative;
@@ -1229,11 +1231,11 @@ border: 0;
     background: #ccc linear-gradient(#ccc, #fff);
     height: 150px;
 }
-.footer-heading {
+.footer-logo {
     margin-top: 25px;
     margin-right: 20px;
 }
-.footer-list {
+.guide-list {
     color: #fff;
     margin: 20px 0;
     padding-left: 0;
@@ -1244,10 +1246,10 @@ border: 0;
     background: #999;
     border-radius: 10px;
 }
-.footer-list li {
+.guide-list li {
     margin: 0;
 }
-.footer-list a {
+.guide-list a {
     display: block;
     padding: 15px 0;
 }
